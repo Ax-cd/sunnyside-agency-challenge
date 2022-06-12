@@ -40,8 +40,8 @@ p, li {
 
 /* HEADER */
 .header {
-    background-color: aquamarine;
-    /* background-image: url("/src/images/mobile/image-header.jpg"); */
+    /* background-color: aquamarine; */
+    background-image: url("/src/images/mobile/image-header.jpg");
     /* height: 40rem; */
 }
 @media screen and (min-width: 95em) {
@@ -52,12 +52,12 @@ p, li {
 h1 {
     color: hsl(0, 0%, 100%);
 }
-.menu {
+.toggle {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-nav > ul {
+.menu {
     /* border: 2px solid red; */
     /* transform: translateX(2rem); */
     list-style: none;
@@ -66,6 +66,10 @@ nav > ul {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+.hide-menu {
+    visibility: hidden;
+    /* animation apparition + disparition menu */
 }
 li > a {
     /* border: 1px solid purple; */

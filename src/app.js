@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggle");
   const menu = document.querySelector(".menu");
 
   function toggleMenu() {
-    menu.addEventListener("click", function (e) {
+    toggleBtn.addEventListener("click", function (e) {
       console.log("hello world");
+      if (menu.style.visibility === "hidden") {
+        menu.style.visibility = "visible"; //display menu
+      } else {
+        menu.style.visibility = "hidden"; //hide menu
+      }
     });
   }
   toggleMenu();
