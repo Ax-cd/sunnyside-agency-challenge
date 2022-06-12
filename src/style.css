@@ -30,60 +30,80 @@ html {
 }
 
 
-h1, h2, h3, h4, .contact {
+h1, h2, h3, h4, #contact {
     font-family: 'Fraunces', serif;
+    /* font-weight: ; */
 }
 p, li {
     font-size: var(--18px);
-    font-family: 'Barlow', sans-serif;;
+    font-family: 'Barlow', sans-serif;
 }
 
 /* HEADER */
 .header {
-    /* background-color: aquamarine; */
     background-image: url("/src/images/mobile/image-header.jpg");
-    /* height: 40rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 @media screen and (min-width: 95em) {
     .header {
         background: url("/src/images/desktop/image-header.jpg");
     }
 }
-h1 {
-    color: hsl(0, 0%, 100%);
+.header-nav {
+    padding: 2rem 1rem 0;
 }
 .toggle {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 11.5rem;
 }
-.menu {
-    /* border: 2px solid red; */
-    /* transform: translateX(2rem); */
+.menu { /*left corner missing*/
     list-style: none;
     background-color: hsl(0, 0%, 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    height: 22rem;
+    padding: .5rem 0;
+    position: relative;
+    top: 3rem;
+    z-index: 1;
 }
-.hide-menu {
-    visibility: hidden;
-    /* animation apparition + disparition menu */
+.hide-menu { /* animation apparition + disparition menu */
+    visibility: hidden;    
 }
-li > a {
-    /* border: 1px solid purple; */
+.menu-link {
     text-decoration: none;
     color: var(--gray-blue);
+    font-weight: 600;
 }
-.contact {
+#contact {
     color: var(--desat-blue);
     text-transform: uppercase;
     background-color: var(--yellow);
-    padding: .5rem 1rem;
+    padding: .8rem 1.2rem;
     border-radius: 30px;
 }
-
+h1 {
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 900;
+    position: relative;
+    top: -14rem;
+}
+.arrow {
+    position: relative;
+    top: -9rem;
+    left: 10rem;    
+}
 
 
 
