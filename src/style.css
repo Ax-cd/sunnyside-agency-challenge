@@ -1,40 +1,108 @@
 /*
 ## Layout
-
 The designs were created to the following widths:
-
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
-
-### Primary
-
-- Soft red: hsl(7, 99%, 70%)
-- Yellow: hsl(51, 100%, 49%)
-- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-- Dark blue (photography text): hsl(198, 62%, 26%)
-- Dark moderate cyan (footer): hsl(168, 34%, 41%)
-
-### Neutral
-
-- Very dark desaturated blue: hsl(212, 27%, 19%)
-- Very dark grayish blue: hsl(213, 9%, 39%)
-- Dark grayish blue: hsl(232, 10%, 55%)
-- Grayish blue: hsl(210, 4%, 67%)
-- White: hsl(0, 0%, 100%)
-
 ## Typography
-
 ### Body Copy
-
 - Font size: 18px
-
-### Font
-
-- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
-- Weights: 600
-- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-- Weights: 700, 900
-
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+/* font-family: 'Barlow', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+/* font-family: 'Fraunces', serif; */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    --16px: 1rem;
+    --18px: 1.125rem;
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --gray-blue: hsl(210, 4%, 67%);
+    --dark-gray-blue: hsl(232, 10%, 55%);
+    --darkest-gray-blue: hsl(213, 9%, 39%);
+    --desat-blue: hsl(212, 27%, 19%);
+}
+
+
+h1, h2, h3, h4, .contact {
+    font-family: 'Fraunces', serif;
+}
+p, li {
+    font-size: var(--18px);
+    font-family: 'Barlow', sans-serif;;
+}
+
+/* HEADER */
+.header {
+    background-color: aquamarine;
+    /* background-image: url("/src/images/mobile/image-header.jpg"); */
+    /* height: 40rem; */
+}
+@media screen and (min-width: 95em) {
+    .header {
+        background: url("/src/images/desktop/image-header.jpg");
+    }
+}
+h1 {
+    color: hsl(0, 0%, 100%);
+}
+.menu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+nav > ul {
+    /* border: 2px solid red; */
+    /* transform: translateX(2rem); */
+    list-style: none;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+li > a {
+    /* border: 1px solid purple; */
+    text-decoration: none;
+    color: var(--gray-blue);
+}
+.contact {
+    color: var(--desat-blue);
+    text-transform: uppercase;
+    background-color: var(--yellow);
+    padding: .5rem 1rem;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.graphic-design {
+    color: hsl(167, 40%, 24%);
+}
+
+.photography {
+    color: hsl(198, 62%, 26%);
+}
+
+footer {
+    color: hsl(168, 34%, 41%);
+}
+.hidden {
+    position: absolute;
+    top: -1000px;
+}
