@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function toggleMenu() {
     toggleBtn.addEventListener("click", function (e) {
-      console.log("hello world");
       if (menu.style.visibility === "hidden") {
         menu.style.visibility = "visible"; //display menu
       } else {
