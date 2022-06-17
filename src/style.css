@@ -28,6 +28,11 @@ html {
     --darkest-gray-blue: hsl(213, 9%, 39%);
     --desat-blue: hsl(212, 27%, 19%);
 }
+body {
+    border: 2px solid purple;
+    /* width: 100vw;
+    object-fit: cover; */
+}
 
 
 h1, h2, h3, h4, #contact {
@@ -41,15 +46,31 @@ p, li {
 
 /* HEADER */
 .header {
+    border: 2px solid green;
+    width: 100%;
+    height: 32rem;
+    min-height: 32rem;
+
     background-image: url("/src/images/mobile/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    /* z-index: -1000; */
 }
 @media screen and (min-width: 95em) {
     .header {
         background: url("/src/images/desktop/image-header.jpg");
     }
+}
+/* .header-img {
+    object-fit: contain;
+} */
+.header-first {
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .header-nav {
     padding: 2rem 1rem 0;
@@ -58,9 +79,6 @@ p, li {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    position: relative;
-    top: 0;
-    left: 11.5rem;
 }
 .menu { /*left corner missing*/
     list-style: none;
@@ -69,14 +87,16 @@ p, li {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 22rem;
-    padding: .5rem 0;
-    position: relative;
-    top: 3rem;
-    z-index: 1;
+    width: 20rem;
+    height: 18rem;
+    padding: .5rem 0 1rem;
+    margin: 3rem auto 0;
+    /* position: relative;
+    top: 3rem; */
+    z-index: 5;
 }
 .hide-menu { /* animation apparition + disparition menu */
-    visibility: hidden;    
+    visibility: hidden;
 }
 .menu-link {
     text-decoration: none;
@@ -90,19 +110,24 @@ p, li {
     padding: .8rem 1.2rem;
     border-radius: 30px;
 }
-h1 {
+h1 { /*fix opacity when menu opened*/
     color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
     font-weight: 900;
-    position: relative;
-    top: -14rem;
+    /* position: relative;
+    top: -15rem; */
+    transform: translateY(-15rem);
+    margin: 0 auto;
+    z-index: 0;
 }
 .arrow {
-    position: relative;
-    top: -9rem;
-    left: 10rem;    
+    /* position: relative;
+    top: -12rem; */
+    transform: translateY(-12rem);
+    display: block;
+    margin: 0 auto;
 }
 
 
