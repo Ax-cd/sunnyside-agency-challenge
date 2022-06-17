@@ -12,7 +12,7 @@ The designs were created to the following widths:
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 /* font-family: 'Barlow', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
-/* font-family: 'Fraunces', serif; */
+/* font-family: 'Fraunces', serif; 700 900*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -28,29 +28,22 @@ html {
     --darkest-gray-blue: hsl(213, 9%, 39%);
     --desat-blue: hsl(212, 27%, 19%);
 }
-body {
-    border: 2px solid purple;
-    /* width: 100vw;
-    object-fit: cover; */
-}
 
-
-h1, h2, h3, h4, #contact {
+h1, h2, h3, h4, #contact, .learn {
     font-family: 'Fraunces', serif;
     /* font-weight: ; */
 }
 p, li {
     font-size: var(--18px);
     font-family: 'Barlow', sans-serif;
+    font-weight: 600;
 }
 
 /* HEADER */
 .header {
-    border: 2px solid green;
     width: 100%;
     height: 32rem;
     min-height: 32rem;
-
     background-image: url("/src/images/mobile/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,9 +56,6 @@ p, li {
         background: url("/src/images/desktop/image-header.jpg");
     }
 }
-/* .header-img {
-    object-fit: contain;
-} */
 .header-first {
     padding: 0 .5rem;
     display: flex;
@@ -134,8 +124,45 @@ h1 { /*fix opacity when menu opened*/
 
 
 
-
-
+.transform-pic, .stand-out-pic {
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.transform-txt, .stand-out-txt {
+    /* border: 2px solid blue; */
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.transform-title, .stand-out-title {
+    /* border: 2px solid gold; */
+    font-size: calc(28rem / 16);
+    font-weight: 900;
+    margin: 1rem 3rem;
+    color: var(--desat-blue);
+}
+.transform-p, .stand-out-p {
+    color: var(--dark-gray-blue);
+    line-height: 1.5;
+    padding: 0 .5rem;
+    margin-bottom: 1.5rem;
+}
+.learn-yellow {
+    text-decoration: underline solid hsla(54, 100%, 71%, .5) 6px;
+    text-underline-offset: -.2em;
+    text-transform: uppercase;
+    color: var(--desat-blue);
+    font-weight: 900;
+}
+.learn-pink {
+    text-decoration: underline solid hsla(0, 72%, 74%, .5) 6px;
+    text-underline-offset: -.2em;
+    text-transform: uppercase;
+    color: var(--desat-blue);
+    font-weight: 900;
+}
 
 
 
@@ -143,10 +170,39 @@ h1 { /*fix opacity when menu opened*/
 .graphic-design {
     color: hsl(167, 40%, 24%);
 }
-
-.photography {
+.photography { /*alternative to transform?*/
     color: hsl(198, 62%, 26%);
+    transform: translateY(-8.3rem);
 }
+.graphic-design-pic, .photography-pic {
+    width: 100%;
+    height: auto;
+}
+.graphic-design-txt, .photography-txt {
+    /* border: 2px solid red; */
+    transform: translateY(-12rem); 
+    text-align: center;
+    /* position: relative;
+    bottom: 0;
+    left: 0; */
+}
+.graphic-design-title, .photography-title {
+    font-size: calc(25rem / 16);
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.graphic-design-p, .photography-p {
+    font-size: calc(16rem / 16);
+    line-height: 1.5;
+    margin: 0 .8rem;
+}
+
+
+
+
+
+
 
 footer {
     color: hsl(168, 34%, 41%);
