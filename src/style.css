@@ -3,24 +3,17 @@
 The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
-
-## Typography
-### Body Copy
-- Font size: 18px
 */
-
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
-/* font-family: 'Barlow', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
-/* font-family: 'Fraunces', serif; 700 900*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 html {
-    --16px: 1rem;
-    --18px: 1.125rem;
+    --sixteen-px: 1rem;
+    --eighteen-px: 1.125rem;
     --soft-red: hsl(7, 99%, 70%);
     --yellow: hsl(51, 100%, 49%);
     --gray-blue: hsl(210, 4%, 67%);
@@ -31,10 +24,9 @@ html {
 
 h1, h2, h3, h4, #contact, .learn, .name {
     font-family: 'Fraunces', serif;
-    /* font-weight: ; */
 }
 p, li {
-    font-size: var(--18px);
+    font-size: var(--eighteen-px);
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
 }
@@ -47,9 +39,7 @@ p, li {
     background-image: url("/src/images/mobile/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
-    /* z-index: -1000; */
+    background-position: bottom;
 }
 @media screen and (min-width: 95em) {
     .header {
@@ -70,7 +60,7 @@ p, li {
     background-color: transparent;
     cursor: pointer;
 }
-.menu { /*left corner missing*/
+.menu {
     list-style: none;
     background-color: hsl(0, 0%, 100%);
     display: flex;
@@ -81,11 +71,19 @@ p, li {
     height: 18rem;
     padding: .5rem 0 1rem;
     margin: 3rem auto 0;
-    /* position: relative;
-    top: 3rem; */
-    z-index: 5;
 }
-.hide-menu { /* animation apparition + disparition menu */
+.menu-corner {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid hsl(0, 0%, 100%);
+    transform: rotate(135deg);
+    position: relative;
+    top: 3.5rem;
+    left: 19.05rem;
+}
+.hide-menu {
     visibility: hidden;
 }
 .menu-link {
@@ -100,44 +98,35 @@ p, li {
     padding: .8rem 1.2rem;
     border-radius: 30px;
 }
-h1 { /*fix opacity when menu opened*/
+h1 {
     color: hsl(0, 0%, 100%);
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
     font-weight: 900;
-    /* position: relative;
-    top: -15rem; */
-    transform: translateY(-15rem);
+    transform: translateY(-17.5rem);
     margin: 0 auto;
-    z-index: 0;
+    opacity: 1;
 }
 .arrow {
-    /* position: relative;
-    top: -12rem; */
-    transform: translateY(-12rem);
+    transform: translateY(-14rem);
     display: block;
     margin: 0 auto;
+    opacity: 1;
 }
 
-
-
-
-
+/* TRANSFORM, STAND-OUT */
 .transform-pic, .stand-out-pic {
-    /* border: 2px solid blue; */
     width: 100%;
     height: auto;
     margin: auto;
 }
 .transform-txt, .stand-out-txt {
-    /* border: 2px solid blue; */
     padding: 2rem 1rem;
     text-align: center;
     margin-bottom: 2rem;
 }
 .transform-title, .stand-out-title {
-    /* border: 2px solid gold; */
     font-size: calc(28rem / 16);
     font-weight: 900;
     margin: 1rem 3rem;
@@ -149,42 +138,39 @@ h1 { /*fix opacity when menu opened*/
     padding: 0 .5rem;
     margin-bottom: 1.5rem;
 }
-.learn-yellow {
-    text-decoration: underline solid hsla(54, 100%, 71%, .5) 6px;
+.learn {
     text-underline-offset: -.2em;
     text-transform: uppercase;
     color: var(--desat-blue);
     font-weight: 900;
+}
+.learn-yellow {
+    text-decoration: underline solid hsla(54, 100%, 71%, .5) 6px;
 }
 .learn-pink {
     text-decoration: underline solid hsla(0, 72%, 74%, .5) 6px;
-    text-underline-offset: -.2em;
-    text-transform: uppercase;
-    color: var(--desat-blue);
-    font-weight: 900;
 }
 
-
-
-
+/* GRAPHIC-DESIGN, PHOTOGRAPHY */
+.graphic-design, .photography {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 32rem;
+    min-height: 32rem;
+}
 .graphic-design {
     color: hsl(167, 40%, 24%);
+    background-image: url("./images/mobile/image-graphic-design.jpg");
 }
-.photography { /*alternative to transform?*/
+.photography {
     color: hsl(198, 62%, 26%);
-    transform: translateY(-8.3rem);
-}
-.graphic-design-pic, .photography-pic {
-    width: 100%;
-    height: auto;
+    background-image: url("./images/mobile/image-photography.jpg");
 }
 .graphic-design-txt, .photography-txt {
-    /* border: 2px solid red; */
-    transform: translateY(-12rem); 
+    transform: translateY(22rem); 
     text-align: center;
-    /* position: relative;
-    bottom: 0;
-    left: 0; */
 }
 .graphic-design-title, .photography-title {
     font-size: calc(25rem / 16);
@@ -198,11 +184,8 @@ h1 { /*fix opacity when menu opened*/
     margin: 0 .8rem;
 }
 
-
-
+/* TESTIMONIALS */
 #testimonials {
-    /* border: 2px solid fuchsia; */
-    transform: translateY(-15.8rem);
     color: var(--dark-gray-blue);
     text-align: center;
     padding: 2rem 1.5rem;
@@ -232,10 +215,8 @@ h4 {
     margin-top: .2em;
 }
 
-
+/* GRID */
 .grid {
-    /* border: 2px solid red; */
-    transform: translateY(-16rem);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
@@ -262,12 +243,40 @@ h4 {
     grid-row: 2;
 }
 
-
-
-
-
+/* FOOTER */
 footer {
     color: hsl(168, 34%, 41%);
+    background-color: hsl(167, 44%, 70%);
+    width: 100%;
+    padding: 2rem 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.footer-logo {
+    filter: invert(52%) sepia(36%) saturate(500%) hue-rotate(118deg) brightness(86%) contrast(87%);
+    margin: 1rem 0  1rem;
+}
+.footer-menu {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0 2rem;
+}
+footer li {
+    list-style: none;
+    padding: 0 1.5rem;
+}
+footer a {
+    text-decoration: none;
+    color: hsl(168, 34%, 41%);
+    font-weight: 600;
+}
+.socials {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 .hidden {
     position: absolute;
