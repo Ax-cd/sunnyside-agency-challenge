@@ -142,7 +142,7 @@ h1 {
 
 /* TRANSFORM, STAND-OUT */
 .transform-pic, .stand-out-pic {
-    /* display: block; */
+    display: block;
     width: 100%;
     height: auto;
     margin: auto;
@@ -178,26 +178,45 @@ h1 {
 }
 @media screen and (min-width: 30em) {
     .section-1 {
-        border: 2px solid red;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
     }
-    .transform-pic {
-        grid-column: 2;
-        grid-row: 1/2;
+    .transform, .stand-out {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
-    .transform-text {
+    .transform {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+    .stand-out {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+    .graphic-design {
         grid-column: 1;
-        grid-row: 1/2;
+        grid-row: 3;
     }
-    .stand-out-pic {
-        grid-column: 1;
-        grid-row: 2/3;
-    }
-    .stand-out-txt {
+    .photography {
         grid-column: 2;
-        grid-row: 2/3;
+        grid-row: 3;
+    }
+    .transform-txt {
+        order: -1;
+    }
+    .transform-txt, .stand-out-txt {
+        text-align: left;
+        padding: 2rem 0  0 8rem;
+        margin: 8rem auto;
+    }
+    .transform-title, .stand-out-title {
+        font-size: calc(36rem / 16);
+        margin: 1rem 12rem 1rem 0;
+    }
+    .transform-p, .stand-out-p {
+        padding: 0;
+        margin-right: 9rem;
     }
 }
 /* GRAPHIC-DESIGN, PHOTOGRAPHY */
