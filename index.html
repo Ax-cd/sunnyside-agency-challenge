@@ -9,9 +9,6 @@
     <script src="/src/app.js"></script>
 </head>
 <body>
-        <!-- lazyloading -->
-        <!-- min-width for media source -->
-        <!-- path ./src -->
     <header class="header">
         <nav class="header-nav">
             <img class="header-logo" src="./src/images/logo.svg" alt="Sunnyside">
@@ -27,91 +24,91 @@
         <h1 class="h1">We are creatives</h1>
         <img class="arrow" src="src/images/icon-arrow-down.svg" alt="">
     </header>
-    
-    <section class="section-1">
-        <div class="transform">
+    <main>
+        <section class="section-1">
+            <div class="transform">
+                <picture>
+                    <source media="(min-width: 60em)" srcset="./src/images/desktop/image-transform.jpg">
+                    <img class="transform-pic" src="./src/images/mobile/image-transform.jpg" alt="A white egg on a yellow background">
+                </picture>
+                <div class="transform-txt">
+                    <h2 class="transform-title">Transform your brand</h2>
+                    <p class="transform-p">We are a full-service creative agency specializing in helping brands grow fast. 
+                        Engage your clients through compelling visuals that do most of the marketing for you.</p>
+                    <a class="learn learn-yellow" href="#">Learn more</a>    
+                </div>
+            </div>
+
+            <div class="stand-out">
+                <picture>
+                    <source media="(min-width: 60em)" srcset="./src/images/desktop/image-stand-out.jpg">
+                    <img class="stand-out-pic" src="./src/images/mobile/image-stand-out.jpg" alt="A pink cup in front of a pink background">
+                </picture>
+                <div class="stand-out-txt">
+                    <h2 class="stand-out-title">Stand out to the right audience</h2>
+                    <p class="stand-out-p">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+                    <a class="learn learn-pink" href="#">Learn more</a> <!--article tag?-->    
+                </div>
+            </div>
+        
+            <div class="graphic-design">
+                <div class="graphic-design-txt">
+                    <h3 class="graphic-design-title">Graphic design</h3>
+                    <p class="graphic-design-p">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>    
+                </div>
+            </div>
+
+            <div class="photography">
+                <div class="photography-txt">
+                    <h3 class="photography-title">Photography</h3>
+                    <p class="photography-p">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>    
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h4>Client testimonials</h4>
+            <div class="clients">
+                <div class="client">
+                    <img src="./src/images/image-emily.jpg" alt="Emily's testimony">
+                    <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+                    <p class="name">Emily R.</p>
+                    <p class="job">Marketing Director</p>
+                </div>
+                <div class="client">
+                    <img src="./src/images/image-thomas.jpg" alt="Thomas's testimony">
+                    <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+                    <p class="name">Thomas S.</p>
+                    <p class="job">Chief Operating Officer</p>
+                </div>
+                <div class="client">
+                    <img src="./src/images/image-jennie.jpg" alt="Jennie's testimony">
+                    <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+                    <p class="name">Jennie F.</p>
+                    <p class="job">Business Owner</p>
+                </div>        
+            </div>
+        </section>
+
+        <div class="grid">
             <picture>
-                <source media="(min-width: 60em)" srcset="./src/images/desktop/image-transform.jpg">
-                <img class="transform-pic" src="./src/images/mobile/image-transform.jpg" alt="A white egg on a yellow background">
+                <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-milkbottles.jpg">
+                <img id="grid-1" class="grid-item" src="./src/images/mobile/image-gallery-milkbottles.jpg" alt="White milk bottles with red caps in front of sky blue background">
             </picture>
-            <div class="transform-txt">
-                <h2 class="transform-title">Transform your brand</h2>
-                <p class="transform-p">We are a full-service creative agency specializing in helping brands grow fast. 
-                    Engage your clients through compelling visuals that do most of the marketing for you.</p>
-                <a class="learn learn-yellow" href="#">Learn more</a>    
-            </div>
-        </div>
-
-        <div class="stand-out">
             <picture>
-                <source media="(min-width: 60em)" srcset="./src/images/desktop/image-stand-out.jpg">
-                <img class="stand-out-pic" src="./src/images/mobile/image-stand-out.jpg" alt="A pink cup in front of a pink background">
+                <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-orange.jpg">
+                <img id="grid-2" class="grid-item" src="./src/images/mobile/image-gallery-orange.jpg" alt="Half of an orange in the center of a white plate, in the center of a light blue plate, placed on an orange background">
             </picture>
-            <div class="stand-out-txt">
-                <h2 class="stand-out-title">Stand out to the right audience</h2>
-                <p class="stand-out-p">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-                <a class="learn learn-pink" href="#">Learn more</a> <!--article tag?-->    
-            </div>
+            <picture>
+                <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-cone.jpg">
+                <img id="grid-3" class="grid-item" src="./src/images/mobile/image-gallery-cone.jpg" alt="Ice cream cone in front of cyan background">
+            </picture>
+            <picture>
+                <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-sugarcubes.jpg">
+                <img id="grid-4" class="grid-item" src="./src/images/mobile/image-gallery-sugar-cubes.jpg" alt="White sugar cubes stacked on top of each other with pink background">
+            </picture>
         </div>
-      
-        <div class="graphic-design">
-            <div class="graphic-design-txt">
-                <h3 class="graphic-design-title">Graphic design</h3>
-                <p class="graphic-design-p">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>    
-            </div>
-        </div>
-
-        <div class="photography">
-            <div class="photography-txt">
-                <h3 class="photography-title">Photography</h3>
-                <p class="photography-p">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>    
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <h4>Client testimonials</h4>
-        <div class="clients">
-            <div class="client">
-                <img src="./src/images/image-emily.jpg" alt="Emily's testimony">
-                <p>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-                <p class="name">Emily R.</p>
-                <p class="job">Marketing Director</p>
-            </div>
-            <div class="client">
-                <img src="./src/images/image-thomas.jpg" alt="Thomas's testimony">
-                <p>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-                <p class="name">Thomas S.</p>
-                <p class="job">Chief Operating Officer</p>
-            </div>
-            <div class="client">
-                <img src="./src/images/image-jennie.jpg" alt="Jennie's testimony">
-                <p>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-                <p class="name">Jennie F.</p>
-                <p class="job">Business Owner</p>
-            </div>        
-        </div>
-    </section>
-
-    <div class="grid">
-        <picture>
-            <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-milkbottles.jpg">
-            <img id="grid-1" class="grid-item" src="./src/images/mobile/image-gallery-milkbottles.jpg" alt="White milk bottles with red caps in front of sky blue background">
-        </picture>
-        <picture>
-            <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-orange.jpg">
-            <img id="grid-2" class="grid-item" src="./src/images/mobile/image-gallery-orange.jpg" alt="Half of an orange in the center of a white plate, in the center of a light blue plate, placed on an orange background">
-        </picture>
-        <picture>
-            <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-cone.jpg">
-            <img id="grid-3" class="grid-item" src="./src/images/mobile/image-gallery-cone.jpg" alt="Ice cream cone in front of cyan background">
-        </picture>
-        <picture>
-            <source media="(min-width: 60em)" srcset="./src/images/desktop/image-gallery-sugarcubes.jpg">
-            <img id="grid-4" class="grid-item" src="./src/images/mobile/image-gallery-sugar-cubes.jpg" alt="White sugar cubes stacked on top of each other with pink background">
-        </picture>
-    </div>
-
+    </main>
     <footer>
         <img class="footer-logo" src="./src/images/logo.svg" alt="Sunnyside">
         <div>
