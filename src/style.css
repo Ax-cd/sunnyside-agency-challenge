@@ -150,6 +150,10 @@ h1 {
         background-color: hsl(0, 0%, 100%);
         margin-left: 2rem;
     }
+    #contact:hover {
+        color: hsl(0, 0%, 100%);
+        background-color: hsla(0, 0%, 100%, .3);
+    }
     h1 {
         font-size: calc(40rem / 16);
         transform: translateY(6rem);
@@ -391,11 +395,17 @@ footer a {
     color: hsl(168, 34%, 41%);
     font-weight: 600;
 }
+footer a:hover {
+    color: hsl(0, 0%, 100%);
+}
 .socials {
     width: 50%;
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+}
+.socials img:hover {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(162deg) brightness(200%) contrast(100%);
 }
 @media screen and (min-width: 30em) { /* DESKTOP */
     footer {
