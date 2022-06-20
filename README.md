@@ -37,7 +37,7 @@ Users should be able to:
 
 #### Desktop design
 
-![](./src/images/mobile-desktop-screenshot.jpeg)
+![](./src/images/desktop-design-screenshot.jpeg)
 
 ## My process
 
