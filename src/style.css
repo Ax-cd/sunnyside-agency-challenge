@@ -19,7 +19,7 @@ html {
 h1, h2, h3, h4, #contact, .learn, .name {
     font-family: 'Fraunces', serif;
 }
-p, li {
+p, li, .attribution {
     font-size: var(--eighteen-px);
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
@@ -415,7 +415,14 @@ footer a:hover {
         width: 15%;
     }
 }
-.hidden {
-    position: absolute;
-    top: -1000px;
+.attribution {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
+.attribution a {
+    color: hsl(0, 0%, 100%);
+}
+.attribution a:hover {
+    color: var(--soft-red);
 }
